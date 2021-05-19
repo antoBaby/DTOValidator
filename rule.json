@@ -1,0 +1,54 @@
+{
+  "schema": [
+    {
+      "$.": {
+        "type": "object",
+        "properties": [
+          {
+            "name": {
+              "type": "string",
+              "minimum": 5,
+              "maximum": 10,
+              "message": "name should be in valid range"
+            }
+          }
+        ]
+      },
+      "summary": {
+        "type": "object",
+        "properties": [
+          {
+            "vendorNumber": {
+              "type": "string",
+              "minimum": 5,
+              "maximum": 10,
+              "pattern": "[0-9]{10}",
+              "message": "vendorNumber should be in valid range"
+            },
+            "address": {
+              "type": "[*]",
+              "properties": [
+                {
+                  "addr": {
+                    "type": "string",
+                    "minimum": 5,
+                    "maximum": 10,
+                    "pattern": "[0-9]{10}",
+                    "message": "name should be in valid range"
+                  },
+                  "zipCode": {
+                    "type": "string",
+                    "minimum": 5,
+                    "maximum": 10,
+                    "pattern": "[0-9]{10}",
+                    "message": "name should be in valid range"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
